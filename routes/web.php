@@ -19,10 +19,10 @@ Route::group(['prefix' => 'admin','middleware' => 'auth'],function() {
 //admin/profile/edit にアクセスしたら ProfileController の edit Action に割り当てるように設定してください。
 
 Route::group(['prefix' => 'admin'],function() {
-    Route::get('profile/create', 'Admin\ProfileController@add')->middleware('auth');//課題１１で追加
+    Route::get('profile/create', 'Admin\ProfileController@add')->middleware('auth');//課題１２で追加
 });
 Route::group(['prefix' => 'admin'],function() {
-    Route::get('profile/edit', 'Admin\ProfileController@edit')->middleware('auth');//課題１１で追加
+    Route::get('profile/edit', 'Admin\ProfileController@edit')->middleware('auth');//課題１２で追加
 });
 
 Auth::routes();
