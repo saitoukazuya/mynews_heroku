@@ -20,7 +20,6 @@ class ProfileController extends Controller
         $profile = new Profile;
         $form = $request->all();
         
-        unset($form['_token']);
 
         $profile->fill($form);
         $profile->save();
@@ -35,6 +34,6 @@ class ProfileController extends Controller
     
     public function update()
     {
-        return redirect('admin/profile/edit');
+        return redirect('admin/profile/update');
     }
 }
