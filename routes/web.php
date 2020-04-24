@@ -17,6 +17,9 @@ Route::group(['prefix' => 'admin','middleware' => 'auth'],function() {
     Route::get('profile/edit', 'Admin\ProfileController@edit');//課題１２で追加
     Route::post('profile/edit', 'Admin\NewsController@update');
     Route::post('profile/update', 'Admin\ProfileController@update');
+    
+    Route::get('about', 'Admin\AboutController@look');
+
 });
 
 Auth::routes();
