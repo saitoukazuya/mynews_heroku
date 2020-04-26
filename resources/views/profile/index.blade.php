@@ -36,11 +36,17 @@
                                 <div class="date">
                                     {{ $post->updated_at->format('Y年M月d日') }}
                                 </div>
-                                <div class="title">
-                                    {{ str_limit($post->title, 150) }}
+                                <div class="body mt-3">
+                                    {{ str_limit($post->name, 150) }}
                                 </div>
                                 <div class="body mt-3">
-                                    {{ str_limit($post->body, 1500) }}
+                                    {{ str_limit($post->hobby, 150) }}
+                                </div>
+                                <div class="body mt-3">
+                                    {{ str_limit($post->gender, 150) }}
+                                </div>
+                                <div class="body mt-3">
+                                    {{ str_limit($post->introduction, 150) }}
                                 </div>
                             </div>
                             <div class="image col-md-6 text-right mt-4">
