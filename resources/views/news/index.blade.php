@@ -8,10 +8,10 @@
                 <div class="headline col-md-10 mx-auto">
                     <div class="row">
                         <div class="col-md-6">
-                            <div class="caption-mx-auto">
+                            <div class="caption mx-auto">
                                 <div class="image">
                                     @if ($headline->image_path)
-                                        <img src="{{ asset('strong/image/' . $headline->image_path) }} ">
+                                        <img src="{{ secure_asset('strong/image/' . $headline->image_path) }}">
                                     @endif
                                 </div>
                                 <div class="title p-2">
@@ -45,12 +45,12 @@
                             </div>
                             <div class="image col-md-6 text-right mt-4">
                                 @if ($post->image_path)
-                                    <img src="{{ asset('strage/image/' . $post->image_path) }}">
+                                    <img src="{{ secure_asset('strage/image/' . $post->image_path) }}">
                                 @endif
                             </div>
                         </div>
                     </div>
-                    <hr color="#0c0c0c">
+                    <hr color="#c0c0c0">
                 @endforeach
             </div>
         </div>

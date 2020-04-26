@@ -1,10 +1,8 @@
 <?php
 
 namespace App\Http\Controllers\Admin;
-
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-
 use App\News;
 
 use App\History;
@@ -26,8 +24,8 @@ class NewsController extends Controller
        $form = $request->all();
        
        if (isset($form['image'])) {
-           $parh = $request->file('image')->store('public/image');
-           $news->image_path =basename($path);
+           $path = $request->file('image')->store('public/image');
+           $news->image_path = basename($path);
        } else {
            $news->image_path = null;
        }

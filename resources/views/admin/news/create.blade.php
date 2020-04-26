@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 {{-- layouts/admin.blade.phpを読み込む --}}
 @extends('layouts.admin')
 
@@ -39,7 +38,7 @@
                         </div>
                     </div>
                     {{ csrf_field() }}
-                    <input type="submit" class="btn-primary" value="更新">
+                    <input type="submit" class="btn btn-primary" value="更新">
                 </form>
             </div>
         </div>
