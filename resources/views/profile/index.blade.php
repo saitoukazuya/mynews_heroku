@@ -15,7 +15,7 @@
                                     @endif
                                 </div>
                                 <div class="title p-2">
-                                    <h1>{{ str_limmit($headline->title,70) }}</h1>
+                                    <h1>{{ str_limit($headline->title,70) }}</h1>
                                 </div>
                             </div>
                         </div>
@@ -34,7 +34,7 @@
                         <div class="row">
                             <div class="text col-md-6">
                                 <div class="date">
-                                    {{ $post->update_at->format('Y年M月d日') }}
+                                    {{ $post->updated_at->format('Y年M月d日') }}
                                 </div>
                                 <div class="title">
                                     {{ str_limit($post->title, 150) }}
