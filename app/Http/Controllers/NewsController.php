@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\support\facades\HTML;
+use Illuminate\support\Facades\HTML;
 
 use App\News;
 
@@ -13,7 +13,7 @@ class NewsController extends Controller
     {
         $posts = News::all()->sortByDesc('updated_at');
         
-        if (count($posts) > 0 ) {
+        if (count($posts) > 0) {
             $headline = $posts->shift();
         } else {
             $headline = null;
